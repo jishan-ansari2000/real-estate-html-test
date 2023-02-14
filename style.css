@@ -83,7 +83,19 @@ font-family: 'Rubik', sans-serif; */
   margin: 0;
 }
 
-/* ******************************************* */
+/* ******* btn hover and active effect ********* */
+
+.btn:hover {
+  scale: 1.01;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  scale: 1;
+  transform: translateY(0px);
+}
+
+/* ***************** Discover ************************** */
 
 .discover {
   padding-top: 120px;
@@ -183,4 +195,101 @@ font-family: 'Rubik', sans-serif; */
   letter-spacing: 0.5px;
   color: #054457;
   margin: 16px 0;
+}
+
+/* ************************ About Us ********************** */
+
+.about {
+  padding-top: 200px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about > * {
+  width: 48%;
+}
+
+.aboutLeft {
+  position: relative;
+}
+
+.aboutLeftBottom {
+  position: absolute;
+  right: 0;
+  left: 100px;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 1;
+
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutLeftBottom > * {
+  display: flex;
+  align-items: center;
+}
+
+.aboutPrice {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  letter-spacing: 0.0025em;
+  margin: 5px 0;
+  color: #054457;
+}
+
+.aboutLeftTop {
+  position: absolute;
+  left: 100px;
+  top: -80px;
+  text-align: center;
+  background: #fefeff;
+  box-shadow: 35px 35px 65px rgba(146, 106, 120, 0.16);
+  padding: 16px 30px 30px 30px;
+}
+
+.tickSquareImg {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
+.aboutRatingText {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 72px;
+  letter-spacing: 0.0025em;
+  margin: 0;
+  color: #054457;
+}
+
+.ratingBox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.ratingBox > * {
+  width: 15px;
+}
+
+.aboutLeft img {
+  width: 100%;
+}
+
+.aboutBtn {
+  background: #69b99d;
+  box-shadow: 24px 24px 65px rgba(81, 140, 119, 0.24);
+  padding: 18px 48px;
+  font-weight: 500;
+  color: #fefeff;
+  border: 0;
+  margin-top: 50px;
 }
