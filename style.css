@@ -590,6 +590,7 @@ a.active .navLinkDot {
 .footerInput {
   padding: 8px 12px;
   border: 0;
+  outline: none;
   color: #575757;
   background-color: #fefeff;
 }
