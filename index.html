@@ -17,31 +17,46 @@
 <body>
 
     <section class="header sidePadding">
-        <div class="topnav" id="myTopnav">
-         
+        <div class="logoContainer">
             <a href="#logo" class="navLogo"><p class="logo"><span>M</span>Mulih</p></a>
-            <div class="menuContainer">
-                <a href="#home" class="navLink">Home</a>
-                <a href="#about" class="navLink">Property</a>
-                <a href="#contact" class="navLink">Property</a>
-                <a href="#contact" class="navLink">Service</a>
-                <a href="#contact" class="navLink">Contact</a>
-                <button class="navBtn btn subText1 navLink" style="margin: 0; background-color: #f5f5f5; color: #69B99D;">
-                    Sign in
-                </button>
-                <button class="navBtn btn subText1 navLink" style="margin: 0;">
-                    Login
-                </button>
-            </div>
-            
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
+        <div class="topnav" id="myTopnav">
+            <div class="navbarRightBottom" id="mynav">
+                <a href="#home" class="navLink active">
+                    <p>Home</p>
+                    <div class="navLinkDot"></div>
+                </a>
+                <a href="#property" class="navLink">
+                    <p>Property</p>
+                    <div class="navLinkDot"></div>
+                </a>
+                <a href="#service" class="navLink">
+                    <p>Service</p>
+                    <div class="navLinkDot"></div>
+                </a>
+                <a href="#about" class="navLink">
+                    <p>About</p>
+                    <div class="navLinkDot"></div>
+                </a>
+                <a href="#contact" class="navLink">
+                    <p>Contact</p>
+                    <div class="navLinkDot"></div>
+                </a>
+                <button class="navBtn btnLight subText1 navLink" style="margin: 0; background-color: #f5f5f5; color: #69B99D;">
+                    Sign in
+                </button>
+                <button class="navBtn btnDark subText1 navLink" style="margin: 0;">
+                    Login
+                </button>
+            </div>  
+        </div>
         
     </section>
 
-    <section class="home sidePadding">
+    <section class="home sidePadding" id="home">
 
         <div style="position: relative; z-index: 10">
             <div class="sectionHeadingLeft" style="max-width: 450px;">
@@ -69,7 +84,7 @@
                     <p class="subText1 homePriceSubText" style="color: #A6A6A6;">$200-$350<i class="fa-solid fa-angle-down angleIcon"></i></p>
                 </div>
                 <div>
-                    <button class="aboutBtn btn subText1" style="margin: 0;">
+                    <button class="aboutBtn btnDark subText1" style="margin: 0;">
                         Search
                     </button>
                 </div>
@@ -83,7 +98,7 @@
 
     <!-- **************** section discover ********************* -->
 
-    <section class="discover sidePadding">
+    <section class="discover sidePadding" id="property">
         <div class="sectionHeadingContainer">
             <div class="sectionHeadingLeft">
                 <div class="headingTitle"><span class="headingTitleText">DISCOVER</span></div>
@@ -110,7 +125,7 @@
                         <p class="cardHeading" style="color: #69B99D; margin-right: 30px">$25,000</p>
                         <p><span style="color: #1F2744">360m2</span><span style="color: #A6A6A6"> Living Area</span></p>
                     </div>
-                    <button class="cardBtn btn subText1">
+                    <button class="cardBtn btnLight subText1">
                         Send Inquiry
                     </button>
                 </div>
@@ -122,7 +137,7 @@
                         <p class="cardHeading" style="color: #69B99D; margin-right: 30px">$35,000</p>
                         <p><span style="color: #1F2744">360m2</span><span style="color: #A6A6A6"> Living Area</span></p>
                     </div>
-                    <button class="cardBtn btn subText1">
+                    <button class="cardBtn btnDark subText1">
                         Send Inquiry
                     </button>
                 </div>
@@ -134,7 +149,7 @@
                         <p class="cardHeading" style="color: #69B99D; margin-right: 30px">$40,000</p>
                         <p><span style="color: #1F2744">360m2</span><span style="color: #A6A6A6"> Living Area</span></p>
                     </div>
-                    <button class="cardBtn btn subText1">
+                    <button class="cardBtn btnLight subText1">
                         Send Inquiry
                     </button>
                 </div>
@@ -144,7 +159,7 @@
     <!-- *************************Advante***************************** -->
     <!-- *************************Advante***************************** -->
 
-    <section class="advante sidePadding">
+    <section class="advante sidePadding" id="service">
         <div class="sectionHeadingLeft" style="max-width: 440px;">
             <div class="headingTitle"><span class="headingTitleText">OUR ADVANTE</span></div>
             <h3 class="sectionHeading">Giving you peace of mind</h3>
@@ -189,7 +204,7 @@
     <!-- **********************About Us*********************** -->
     <!-- **********************About Us*********************** -->
 
-    <section class="about sidePadding" >
+    <section class="about sidePadding" id="about">
         <div class="aboutLeft">
             <img src="image/house/aboutImg.svg" alt="about" />
             <div class="aboutLeftTop">
@@ -231,7 +246,7 @@
                 <div class="headingTitle"><span class="headingTitleText">ABOUT US</span></div>
                 <h3 class="sectionHeading">How much is your property worth now?</h3>
                 <p class="subText1">We have built our reputation as true local area experts. We have gained more knowledge about buyer interests, our neighborhood and the market than any other brand because we live locally and work for local people.</p>
-                <button class="aboutBtn btn subText1">
+                <button class="aboutBtn btnDark subText1">
                     Send Inquiry
                 </button>
             </div>
@@ -315,7 +330,7 @@
 
     <!-- *********** footer ******************* -->
 
-    <section class="footer sidePadding" >
+    <section class="footer sidePadding" id="contact">
         
         <div>
             <p class="logo"><span>M</span>Mulih</p>
@@ -323,22 +338,22 @@
             <p class="subText1 footerSubHeading">Newsletter</p>
             <div style="background-color: #fefeff; display: inline-flex;">
                 <input type="text" placeholder="Input your email" class="subText1 footerInput">
-                <button class="footerBtn subText1">Send</button>
+                <button class="footerBtn btnDark subText1">Send</button>
             </div>
         </div>
 
         <div>
             <p class="footerSubHeading subText1">Service</p>
-            <a href="/#" class="footerLink subText1">About us</a>
-            <a href="#" class="footerLink subText1">Careers</a>
-            <a href="#" class="footerLink subText1">Terms & Conditions</a>
-            <a href="#" class="footerLink subText1">Privacy & Policy</a>
+            <a href="/#" class="footerLink subText1"><span class="underline" style="display: inline-block">About us</span></a>
+            <a href="#" class="footerLink subText1"><span class="underline" style="display: inline-block">Careers</span></a>
+            <a href="#" class="footerLink subText1"><span class="underline" style="display: inline-block">Terms & Conditions</span></a>
+            <a href="#" class="footerLink subText1"><span class="underline" style="display: inline-block">Privacy & Policy</span></a>
         </div>
         <div>
             <p class="footerSubHeading subText1">Community</p>
-            <a href="#" class="footerLink subText1">Find agents</a>
-            <a href="#" class="footerLink subText1">Lifestyle</a>
-            <a href="#" class="footerLink subText1">Legal notic</a>
+            <a href="#" class="footerLink subText1"><span class="underline" style="display: inline-block">Find agents</span></a>
+            <a href="#" class="footerLink subText1"><span class="underline" style="display: inline-block">Lifestyle</span></a>
+            <a href="#" class="footerLink subText1"><span class="underline" style="display: inline-block">Legal notic</span></a>
         </div>
         
         <div>
@@ -361,12 +376,13 @@
 </body>
     <script>
         function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
+            var x = document.getElementById("mynav");
+            console.log(x);
+            if (x.className === "navbarRightBottom") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbarRightBottom";
+            }
         }
     </script>
     <script src="index.js"></script>

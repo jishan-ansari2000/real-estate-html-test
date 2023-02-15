@@ -57,6 +57,18 @@ body {
   color: #69b99d;
 }
 
+.subText1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.0025em;
+
+  color: #73788c;
+  margin: 0;
+}
+
 .sectionHeadingContainer {
   display: flex;
   justify-content: space-between;
@@ -85,8 +97,12 @@ body {
   margin-top: 20px;
 }
 
+.moreLink:hover {
+  scale: 1.02;
+}
+
 .moreLink:active {
-  scale: 0.98;
+  scale: 1;
 }
 
 .moreLinkIconBox {
@@ -100,28 +116,44 @@ body {
   color: #fff;
 }
 
-.subText1 {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.0025em;
-
-  color: #73788c;
-  margin: 0;
-}
-
 /* ******* btn hover and active effect ********* */
 
-.btn:hover {
-  scale: 1.01;
-  transform: translateY(-1px);
+.btnDark {
+  cursor: pointer;
+  background-color: #69b99d !important;
+  border: 0 !important;
+  color: #fefeff !important;
 }
 
-.btn:active {
-  scale: 1;
-  transform: translateY(0px);
+.btnDark:hover {
+  background-color: #5aa98d !important;
+}
+
+.btnDark:active {
+  background-color: #569a82 !important;
+}
+
+.btnLight:hover {
+  background-color: #f8f8f8 !important;
+  color: #5aa98d !important;
+}
+
+.btnLight:active {
+  background-color: #f5f5f5 !important;
+  color: #569a82 !important;
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.3s;
+}
+
+.underline:hover::after {
+  width: 100%;
 }
 
 /* ***************** Navbar ************************** */
@@ -129,29 +161,40 @@ body {
 .header {
   background-color: #f5f5f5;
   padding-top: 20px;
-}
+  display: flex;
+  justify-content: space-between;
 
-.topnav {
-  overflow: hidden;
+  position: relative;
+  z-index: 10;
 }
 
 .topnav a {
-  float: left;
   display: block;
   text-align: center;
   text-decoration: none;
 }
 
-.topnav .navLogo {
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.logoContainer .navLogo {
   font-size: 24px;
   color: #f9faf8;
   font-weight: 600;
   font-family: sans-serif;
-  padding: 10px 0px;
+  text-decoration: none;
 }
 
-.menuContainer {
-  float: right;
+.navbarRightBottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 856px;
 }
 
 .topnav a.navLink {
@@ -162,20 +205,35 @@ body {
   line-height: 26px;
   letter-spacing: 0.5px;
   color: #8e8e8e;
-  padding: 14px 0 14px 30px;
+  padding: 14px 15px;
 }
 
-.topnav a:hover {
+.topnav a.navLink > p {
+  margin: 0;
+}
+
+.navLinkDot {
+  display: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #04aa6d;
+  margin: 8px auto 0;
+}
+
+.navLink:hover .navLinkDot,
+a.active .navLinkDot {
+  display: block;
+}
+
+.topnav a:hover,
+.topnav a.active {
   color: #04aa6d;
+  padding-top: 0;
   opacity: 1;
 }
 
-.topnav a.active {
-  background-color: #04aa6d;
-  color: white;
-}
-
-.topnav .icon {
+.logoContainer .icon {
   display: none;
   padding: 14px 0;
   color: #4ba586;
@@ -233,8 +291,10 @@ body {
 }
 
 .homePriceBox {
-  display: flex;
-  padding: 24px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 24px 24px;
   background: #fefeff;
   box-shadow: 35px 35px 65px rgba(146, 106, 120, 0.16);
   width: fit-content;
@@ -242,6 +302,7 @@ body {
 
 .homePriceBox > * {
   padding-right: 48px;
+  padding-top: 24px;
 }
 
 .homePriceBox > *:nth-child(4) {
@@ -266,8 +327,8 @@ body {
 /* ***************** Discover ************************** */
 
 .discover {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .cardContainer {
@@ -319,22 +380,6 @@ body {
   margin-top: 12px;
   cursor: pointer;
   /* transition: all 0.5s linear; */
-}
-
-.cardContainer > *:nth-child(2) .cardBtn {
-  background-color: #69b99d;
-  border: 0;
-  color: #fefeff;
-}
-
-.cardBtn:hover {
-  scale: 1.01;
-  transform: translateY(-1px);
-}
-
-.cardBtn:active {
-  scale: 1;
-  transform: translateY(0px);
 }
 
 /* *************************advante*************** */
@@ -565,10 +610,6 @@ body {
   cursor: pointer;
 }
 
-.footerBtn:active {
-  background: #569a82;
-}
-
 .footerLink {
   text-decoration: none;
   display: block;
@@ -589,9 +630,18 @@ body {
   height: 40px;
   border-radius: 100%;
 
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footerIconContainer .iconBox:hover {
+  background-color: #eaeaea !important;
+}
+
+.footerIconContainer .iconBox:active {
+  background-color: #d8d8d8 !important;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -600,34 +650,31 @@ body {
     padding-right: 100px;
   }
 
-  .topnav .navLink {
+  .header {
+    display: block;
+  }
+
+  .navbarRightBottom .navLink {
     display: none;
   }
 
-  .menuContainer {
-    float: left;
-  }
-
-  .topnav a.icon {
-    float: right;
+  .logoContainer a.icon {
     display: block;
   }
 
-  .topnav.responsive {
-    position: relative;
+  .navbarRightBottom.responsive {
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
   }
 
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .topnav.responsive a,
-  .topnav.responsive .navLink {
-    float: none;
+  .navbarRightBottom.responsive .navLink {
     display: block;
-    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .topnav {
+    margin-top: 30px;
   }
 
   .about {
@@ -651,6 +698,20 @@ body {
     padding-left: 80px;
     padding-right: 80px;
   }
+
+  .sectionHeading {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.4px;
+  }
+
+  .aboutRatingText {
+    font-size: 56px;
+  }
+
+  .aboutPrice {
+    font-size: 40px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -670,11 +731,37 @@ body {
     padding-right: 40px;
   }
 
+  .homeImgBox {
+    width: 100%;
+  }
+
   .advanteCard {
     padding: 12px;
     width: 31%;
     min-width: 300px;
     margin: 30px auto 0;
+  }
+
+  .aboutPrice {
+    font-size: 32px;
+  }
+
+  .about > *:nth-child(1) {
+    margin-top: 150px;
+    margin-bottom: 75px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .aboutLeftBottom {
+    left: 0px;
+    bottom: -75px;
+    padding: 10px;
+  }
+
+  .aboutLeftTop {
+    left: 0px;
+    top: -80px;
   }
 }
 
@@ -686,5 +773,9 @@ body {
 
   .advanteCard {
     width: 100%;
+  }
+
+  .aboutPrice {
+    font-size: 28px;
   }
 }
