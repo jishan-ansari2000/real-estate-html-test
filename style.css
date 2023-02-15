@@ -593,6 +593,7 @@ a.active .navLinkDot {
   outline: none;
   color: #575757;
   background-color: #fefeff;
+  width: 100%;
 }
 
 .footerInput::placeholder {
